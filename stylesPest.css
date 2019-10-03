@@ -1,0 +1,84 @@
+p{
+    color: pink;
+}
+body{
+    position: relative;
+	justify-content: center;
+	text-align: center;
+	min-height: 7vh;
+	color: #fff;
+	background: pink;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#Logo {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.headingc{
+    top: 20%;
+    position: relative;
+    background-color: azure;
+    border: none;
+    border-radius: 50px;
+    left: 0;
+    color: darkgreen;
+    padding: 0 50px 0 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.headingc h1{
+    text-align: center;
+    font-size: 35px;
+}
+
+#tableview {
+    border: none;
+    border-radius: 50px;
+    width: 90%;
+    left: 5%;
+    margin-bottom: 2%;
+    align-content: center;
+    background-color: azure;
+    position: inherit;
+}
+#tableview .inputuser{
+    margin-top: 20px;
+    position: relative;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    left: 0;
+    color: darkgreen;
+    padding: 0 50px 0 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+}
+#tableprop {
+    margin-top: 2%;
+    width:90%;
+    border-radius: 25px;
+    position: relative;
+    clear: both;
+    display: block;
+    border-collapse: collapse;
+    display: inline-block;
+    margin-bottom: 3%;
+}
+#tableview th{
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: olivedrab
+}
+#tableview tr{
+    font-size: 15px;
+    color: black;
+    text-align: center;
+}
+tr:nth-child(even){ background-color:#E8E8E8;}
+tr:nth-child(odd){ background-color:silver;}

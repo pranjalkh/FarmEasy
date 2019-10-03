@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Weather Application</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="weather.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+        <style>
+            #forecast{
+                display:none;
+            }
+            body {
+background: #00b09b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+}
+        </style>
+
+	</head>
+
+
+	<body>
+	<span id='MicrosoftTranslatorWidget' class='Dark' style='width: 100%; box-sizing: border-box; color:white;background: linear-gradient(to right, #96c93d, #00b09b);margin: 0;'></span>
+	<script type='text/javascript'>setTimeout(function(){{var s=document.createElement('script');s.type='text/javascript';s.charset='UTF-8';s.src=((location && location.href && location.href.indexOf('https') == 0)?'https://ssl.microsofttranslator.com':'http://www.microsofttranslator.com')+'/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=False&ui=true&settings=Manual&from=';var p=document.getElementsByTagName('head')[0]||document.documentElement;p.insertBefore(s,p.firstChild); }},0);</script>
+		
+		<div class="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="index.html" class="branding">
+						<img src="image" alt="" class="logo">
+						<div class="logo-type">
+							
+						</div>
+					</a>
+
+					<!-- Default snippet for navigation -->
+					<div class="main-navigation">
+						
+						<ul class="menu">
+							
+							
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+
+				</div>
+			</div>
+        </div><!-- .site-header -->
+
+			<div class="hero" data-bg-image="images/banner.png">
+				<div class="container">
+					<form action="#" class="find-location">
+						<input type="text" id="location" placeholder="Find your location...">
+						<center>
+							<button type="button" onclick="loadDoc()" style="margin-top: 40px;width: 20%;
+    padding: 20px; background: #1e202b; min-width: 100px; cursor: pointer; outline: none;">Get Weather</button>
+						</center>
+						
+					</form>
+					</div>
+			</div>
+			<div id="forecast" class="forecast-table">
+				<div class="container">
+					<div class="forecast-container">
+						<div class="today forecast">
+							<div class="forecast-header">
+								<div id="day1" idclass="day">Monday</div>
+								<div id="date1" class="date">6 Oct</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+                                <div id="name" class="location"></div>
+								<div class="degree">
+									<div id ="temp1" class="num">23<sup>o</sup>C</div>
+									<div class="forecast-icon">
+										<img id ="image1" src="http://cdn.apixu.com/weather/64x64/night/143.png" alt="" width=90>
+									</div>	
+								</div >
+                                <span id="condition1" >20</span>
+								<img src="images/icon-wind.png" alt=""><span id="wind1">18km/h</span>
+								<img src="images/icon-compass.png" alt=""><span id="direction1">East</span>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id ="day2" class="day">Tuesday</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img  id="image2" src="images/icons/icon-3.svg" alt="" width=48>
+								</div>
+								<div id="maxtemp2" class="degree">23<sup>o</sup>C</div>
+								<small id="mintemp2">18<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="day3" class="day">Wednesday</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img id="image3" src="images/icons/icon-5.svg" alt="" width=48>
+								</div>
+								<div id="maxtemp3" class="degree">23<sup>o</sup>C</div>
+								<small id="mintemp3">18<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="day4" class="day">Thursday</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img id="image4" src="images/icons/icon-7.svg" alt="" width=48>
+								</div>
+								<div id="maxtemp4" class="degree">23<sup>o</sup>C</div>
+								<small id="mintemp4">18<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="day5" class="day">Friday</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img id="image5" src="images/icons/icon-12.svg" alt="" width=48>
+								</div>
+								<div id="maxtemp5" class="degree">23<sup>o</sup>C</div>
+								<small id="mintemp5">18<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="day6" class="day">Saturday</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img id="image6" src="images/icons/icon-13.svg" alt="" width=48>
+								</div>
+								<div id="maxtemp6" class="degree">23<sup>o</sup>C</div>
+								<small id="mintemp6">18<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div id="day7" class="day">Sunday</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img id="image7" src="images/icons/icon-14.svg" alt="" width=48>
+								</div>
+								<div  id="maxtemp7" class="degree">23<sup>o</sup>C</div>
+								<small id="mintemp7">18<sup>o</sup></small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+				</div>
+                </div>
+
+				<div class="fullwidth-block" data-bg-color="#262936">
+					
+                </div>
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							
+						</div>
+					</div>
+				</div>
+			</main>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+						
+						<div class="col-md-3 col-md-offset-1">
+							
+				</div></div></div>
+            </div>
+                    
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+   
+    <script>
+function loadDoc() {
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var show=document.getElementById("forecast");
+    var x=document.getElementById("location").value;
+    var xhttp = new XMLHttpRequest();
+    show.style.display="block";
+    document.getElementById("name").innerHTML=x.toUpperCase();
+  
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var weather=JSON.parse(this.responseText);
+        //Day 1
+       date1= JSON.stringify(weather.location.localtime);
+        date1formatted=date1.substring(1,date1.length-1);
+        var d = new Date(date1formatted);
+        var image1=JSON.stringify(weather.current.condition.icon);
+        var image1formatted="https:"+image1.substring(1,image1.length-1);
+        document.getElementById("date1").innerHTML =d.getDate()+" "+months[d.getMonth()];
+        document.getElementById("day1").innerHTML = days[d.getDay()];
+        document.getElementById("temp1").innerHTML =JSON.stringify(weather.current.temp_c)+"<sup>o</sup>"+"C"
+        document.getElementById("condition1").innerHTML =" Condition: "+JSON.stringify(weather.current.condition.text);
+        document.getElementById("wind1").innerHTML ="  "+JSON.stringify(weather.current.wind_kph)+"km/h";
+        document.getElementById("direction1").innerHTML ="  Wind direction: "+JSON.stringify(weather.current.wind_dir);
+        document.getElementById("image1").src =image1formatted;
+        
+        // Day 2
+        var date2=JSON.stringify(weather.forecast.forecastday[1].date);
+        var date2formatted=date2.substring(1,date2.length-1);
+        var d2 = new Date(date2formatted);
+        
+        var image2=JSON.stringify(weather.forecast.forecastday[1].day.condition.icon);
+        var image2formatted="https:"+image2.substring(1,image2.length-1);
+        document.getElementById("day2").innerHTML = days[(d2.getDay()%7)+1];
+        document.getElementById("maxtemp2").innerHTML =JSON.stringify(weather.forecast.forecastday[1].day.maxtemp_c)+"<sup>o</sup>"+"C";
+        document.getElementById("mintemp2").innerHTML =JSON.stringify(weather.forecast.forecastday[1].day.mintemp_c)+"<sup>o</sup>";
+        document.getElementById("image2").src =image2formatted;
+        //Day 3
+        var date3=JSON.stringify(weather.forecast.forecastday[2].date);
+        var date3formatted=date3.substring(1,date3.length-1);
+        var d3 = new Date(date3formatted);
+        
+        var image3=JSON.stringify(weather.forecast.forecastday[2].day.condition.icon);
+        var image3formatted="https:"+image3.substring(1,image3.length-1);
+        document.getElementById("day3").innerHTML = days[(d3.getDay()%7)+1];
+        document.getElementById("maxtemp3").innerHTML =JSON.stringify(weather.forecast.forecastday[2].day.maxtemp_c)+"<sup>o</sup>"+"C";
+        document.getElementById("mintemp3").innerHTML =JSON.stringify(weather.forecast.forecastday[2].day.mintemp_c)+"<sup>o</sup>";
+        document.getElementById("image3").src =image3formatted;
+        
+        //Day 4
+        var date4=JSON.stringify(weather.forecast.forecastday[3].date);
+        var date4formatted=date4.substring(1,date4.length-1);
+        var d4 = new Date(date4formatted);
+        
+        var image4=JSON.stringify(weather.forecast.forecastday[3].day.condition.icon);
+        var image4formatted="https:"+image4.substring(1,image4.length-1);
+        document.getElementById("day4").innerHTML = days[(d4.getDay()%7)+1];
+        document.getElementById("maxtemp4").innerHTML =JSON.stringify(weather.forecast.forecastday[3].day.maxtemp_c)+"<sup>o</sup>"+"C";
+        document.getElementById("mintemp4").innerHTML =JSON.stringify(weather.forecast.forecastday[3].day.mintemp_c)+"<sup>o</sup>";
+        document.getElementById("image4").src =image4formatted;
+          
+        //Day 5
+        var date5=JSON.stringify(weather.forecast.forecastday[4].date);
+        var date5formatted=date5.substring(1,date5.length-1);
+        var d5 = new Date(date5formatted);
+        
+        var image5=JSON.stringify(weather.forecast.forecastday[4].day.condition.icon);
+        var image5formatted="https:"+image5.substring(1,image5.length-1);
+        document.getElementById("day5").innerHTML =days[(d5.getDay()+1)%7];
+        document.getElementById("maxtemp5").innerHTML =JSON.stringify(weather.forecast.forecastday[4].day.maxtemp_c)+"<sup>o</sup>"+"C";
+        document.getElementById("mintemp5").innerHTML =JSON.stringify(weather.forecast.forecastday[4].day.mintemp_c)+"<sup>o</sup>";
+        document.getElementById("image5").src =image5formatted;
+    
+        //Day 6
+        var date6=JSON.stringify(weather.forecast.forecastday[5].date);
+        var date6formatted=date6.substring(1,date6.length-1);
+        var d6 = new Date(date6formatted);
+        
+        var image6=JSON.stringify(weather.forecast.forecastday[5].day.condition.icon);
+        var image6formatted="https:"+image6.substring(1,image6.length-1);
+        document.getElementById("day6").innerHTML = days[(d6.getDay()%7)+1];
+        document.getElementById("maxtemp6").innerHTML =JSON.stringify(weather.forecast.forecastday[5].day.maxtemp_c)+"<sup>o</sup>"+"C";
+        document.getElementById("mintemp6").innerHTML =JSON.stringify(weather.forecast.forecastday[5].day.mintemp_c)+"<sup>o</sup>";
+        document.getElementById("image6").src =image6formatted;
+        
+        //Day 7
+        var date7=JSON.stringify(weather.forecast.forecastday[6].date);
+        var date7formatted=date7.substring(1,date7.length-1);
+        var d7 = new Date(date7formatted);
+        
+        var image7=JSON.stringify(weather.forecast.forecastday[6].day.condition.icon);
+        var image7formatted="https:"+image7.substring(1,image7.length-1);
+        document.getElementById("day7").innerHTML = days[(d7.getDay()%7)+1];
+        document.getElementById("maxtemp7").innerHTML =JSON.stringify(weather.forecast.forecastday[6].day.maxtemp_c)+"<sup>o</sup>"+"C";
+        document.getElementById("mintemp7").innerHTML =JSON.stringify(weather.forecast.forecastday[6].day.mintemp_c)+"<sup>o</sup>";
+        document.getElementById("image7").src =image7formatted;
+    
+    
+    }
+  };
+   
+  xhttp.open("GET", "https://api.apixu.com/v1/forecast.json?key=68a8f6994f184c6c927181847192603&q="+x+"&days=7", true);
+  xhttp.send();
+   
+}
+    
+        
+</script>    
+</body>
+</html>
