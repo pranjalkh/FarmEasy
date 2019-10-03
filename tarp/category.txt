@@ -1,0 +1,8 @@
+rice
+wheat
+cotton
+pulses
+corn
+fruits
+vegitables
+others

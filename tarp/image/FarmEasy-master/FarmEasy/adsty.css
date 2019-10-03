@@ -1,0 +1,162 @@
+@charset "utf-8";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+body {
+background: #00b09b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: dimgray;
+  font: 87.5%/1.5em 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+input {
+  border: none;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 0;
+  -webkit-appearance: none;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+after { clear: both; }
+
+#login {
+  margin: 50px auto;
+  width: 350px;
+}
+
+#login form, .blogs {
+  margin: auto;
+  padding: 22px;
+  width: 100%;
+  border-radius: 5px;
+  background: whitesmoke;
+  border-top: 3px solid #bfbfbf;
+  border-bottom: 3px solid #bfbfbf;
+}
+
+#login form span {
+  background-color: gainsboro;
+  border-radius: 3px 0px 0px 3px;
+  border-right: 3px solid #bfbfbf;
+  color: #606468;
+  display: block;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+#login form input[type="text"] {
+  background-color: gainsboro;
+  border-radius: 0px 3px 3px 0px;
+  color: dimgray;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 255px;
+  height: 50px;
+  -webkit-transition:0.5s;
+  transition:0.5s;
+
+}
+
+#login textarea{
+  background-color: gainsboro;
+  border-radius: 0px 3px 3px 0px;
+  color: dimgray;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  -webkit-transition:0.5s;
+  transition:0.5s;
+
+}
+#login form input[type="password"] {
+  background-color: gainsboro;
+  border-radius: 0px 3px 3px 0px;
+  color: dimgray;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 255px;
+  height: 50px;
+  -webkit-transition:0.5s;
+  transition:0.5s;
+
+}
+
+#login form input[type="email"] {
+  background-color: gainsboro;
+  border-radius: 0px 3px 3px 0px;
+  color: dimgray;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 255px;
+  height: 50px;
+  -webkit-transition:0.5s;
+  transition:0.5s;
+
+}
+
+#login form input[type="submit"] {
+  background-color: #4CAF50;
+  border: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+#login form input[type="submit"]:hover {
+  opacity: 0.8; color: white;
+}
+
+.navi {
+  background-color: black;
+  border: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.center{
+  position: absolute;
+  margin: auto;
+  left: 42%;
+  color: whitesmoke;
+}
+
+.reg{
+  position: absolute;
+  margin: auto;
+  left: 30%;
+  top: 40%;
+  padding: 20px;
+  color: white;
+  background-color: black;
+}
